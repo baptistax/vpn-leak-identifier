@@ -1,0 +1,31 @@
+# File: .goreleaser.yaml (complete file)
+version: 2
+
+project_name: vpnleakidentifier
+
+builds:
+  - id: vpnleakidentifier
+    main: ./cmd/vpnleakidentifier
+    binary: vpnleakidentifier
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+    goarch:
+      - amd64
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w
+      - -X github.com/baptistax/vpnleakidentifier/internal/version.Version={{ .Version }}
+      - -X github.com/baptistax/vpnleakidentifier/internal/version.Commit={{ .Commit }}
+      - -X github.com/baptistax/vpnleakidentifier/internal/version.BuildDate={{ .Date }}
+
+archives:
+  - id: default
+    formats: [ 'binary' ]
+    name_template: 'vpnleakidentifier_{{ .Os }}_{{ .Arch }}{{ if eq .Os "windows" }}.exe{{ end }}'
+
+checksum:
+  name_template: "checksums.txt"

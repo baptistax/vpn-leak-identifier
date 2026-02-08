@@ -1,6 +1,7 @@
 # Vpn Leak Identifier
 
-A CLI tool validate VPN behavior
+A CLI tool validate VPN behavior with a kill switch test
+- Kill switch leak test
 - Exit IP (IPv4/IPv6) + best-effort geo (via `ident.me/json`, with `tnedi.me` fallback)
 - DNS recursor hints (`ns.ident.me`)
 - Optional STUN observed public IP (UDP)

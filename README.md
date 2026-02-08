@@ -1,21 +1,22 @@
-# vpnleakidentifier
+# Vpn Leak Identifier
 
-A small CLI to help validate VPN behavior:
+A CLI tool validate VPN behavior
 - Exit IP (IPv4/IPv6) + best-effort geo (via `ident.me/json`, with `tnedi.me` fallback)
 - DNS recursor hints (`ns.ident.me`)
 - Optional STUN observed public IP (UDP)
 
 ## Quick start
 
+1. Download the binary from releases for your platform
+
 ```bash
-go build -o vpnleakidentifier ./cmd/vpnleakidentifier
+run ./vli
 
 # Default: 30s run intended for kill-switch validation
 # (recommended: start with VPN ON, then disable VPN during the 30s window)
-./vpnleakidentifier
 
-# Fast VPN-only test (5s, no kill-switch verdict)
-./vpnleakidentifier test -nks
+# Fast VPN-only test (5s, no kill-switch)
+./vli -nks
 ```
 
 ## Outputs

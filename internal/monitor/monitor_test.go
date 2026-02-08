@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/baptistax/vpnleakidentifier/internal/report"
+	"github.com/baptistax/vpn-leak-identifier/internal/report"
 )
 
 func TestChanged_PublicIPChange(t *testing.T) {

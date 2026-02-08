@@ -15,12 +15,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/baptistax/vpnleakidentifier/internal/app"
-	"github.com/baptistax/vpnleakidentifier/internal/logging"
-	"github.com/baptistax/vpnleakidentifier/internal/monitor"
-	"github.com/baptistax/vpnleakidentifier/internal/report"
-	"github.com/baptistax/vpnleakidentifier/internal/runctx"
-	"github.com/baptistax/vpnleakidentifier/internal/version"
+	"github.com/baptistax/vpn-leak-identifier/internal/app"
+	"github.com/baptistax/vpn-leak-identifier/internal/logging"
+	"github.com/baptistax/vpn-leak-identifier/internal/monitor"
+	"github.com/baptistax/vpn-leak-identifier/internal/report"
+	"github.com/baptistax/vpn-leak-identifier/internal/runctx"
+	"github.com/baptistax/vpn-leak-identifier/internal/version"
 )
 
 const defaultExportsDir = "exports"

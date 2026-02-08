@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/baptistax/vpnleakidentifier/internal/leaks"
-	"github.com/baptistax/vpnleakidentifier/internal/netutil"
-	"github.com/baptistax/vpnleakidentifier/internal/report"
+	"github.com/baptistax/vpn-leak-identifier/internal/leaks"
+	"github.com/baptistax/vpn-leak-identifier/internal/netutil"
+	"github.com/baptistax/vpn-leak-identifier/internal/report"
 )
 
 type TestOptions struct {

@@ -6,8 +6,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/baptistax/vpnleakidentifier/internal/app"
-	"github.com/baptistax/vpnleakidentifier/internal/report"
+	"github.com/baptistax/vpn-leak-identifier/internal/app"
+	"github.com/baptistax/vpn-leak-identifier/internal/report"
 )
 
 type Event struct {

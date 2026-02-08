@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/baptistax/vpnleakidentifier/internal/netutil"
+	"github.com/baptistax/vpn-leak-identifier/internal/netutil"
 )
 
 func DNSLeakTestViaDNSLeakTestCom(ctx context.Context, queries int) ([]DNSLeakServer, error) {

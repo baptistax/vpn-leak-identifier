@@ -1,12 +1,12 @@
 # File: .goreleaser.yaml (complete file)
 version: 2
 
-project_name: vpnleakidentifier
+project_name: vpn-leak-identifier
 
 builds:
-  - id: vpnleakidentifier
-    main: ./cmd/vpnleakidentifier
-    binary: vpnleakidentifier
+  - id: vpn-leak-identifier
+    main: ./cmd/vpn-leak-identifier
+    binary: vli
     env:
       - CGO_ENABLED=0
     goos:
@@ -18,14 +18,14 @@ builds:
       - -trimpath
     ldflags:
       - -s -w
-      - -X github.com/baptistax/vpnleakidentifier/internal/version.Version={{ .Version }}
-      - -X github.com/baptistax/vpnleakidentifier/internal/version.Commit={{ .Commit }}
-      - -X github.com/baptistax/vpnleakidentifier/internal/version.BuildDate={{ .Date }}
+      - -X github.com/baptistax/vpn-leak-identifier/internal/version.Version={{ .Version }}
+      - -X github.com/baptistax/vpn-leak-identifier/internal/version.Commit={{ .Commit }}
+      - -X github.com/baptistax/vpn-leak-identifier/internal/version.BuildDate={{ .Date }}
 
 archives:
   - id: default
     formats: [ 'binary' ]
-    name_template: 'vpnleakidentifier_{{ .Os }}_{{ .Arch }}{{ if eq .Os "windows" }}.exe{{ end }}'
+    name_template: 'vpn-leak-identifier_{{ .Os }}_{{ .Arch }}{{ if eq .Os "windows" }}.exe{{ end }}'
 
 checksum:
   name_template: "checksums.txt"
